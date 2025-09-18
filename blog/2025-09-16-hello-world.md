@@ -6,7 +6,7 @@ tags: ["zh", "misc"]
 
 果然第一篇文章還是要叫 hello world 才行呢。
 
-嗨！我是 **uima**，是一名後端工程師，現在主要專精在 [Rust](https://www.rust-lang.org) 跟 Web 開發。喜歡自由開源軟體、人體工學鍵盤和TODO。最近在工作之外的新挑戰，是準備參加十二月的[日檢 N3](https://www.jlpt.tw)！
+嗨！我是 **uima**，是一名後端工程師，現在主要專精在 [Rust](https://www.rust-lang.org) 跟 Web 開發。喜歡自由開源軟體和人體工學鍵盤。最近在工作之外的新挑戰，是準備參加十二月的[日檢 N3](https://www.jlpt.tw)！
 
 ## Why Blog?
 
