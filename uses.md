@@ -20,7 +20,7 @@ You can find all the software and config in my laptop at my [nix-config](https:/
   - [Brave](https://brave.com)
 - Editor: [NeoVim](https://neovim.io)
 - Terminal: [foot](https://codeberg.org/dnkl/foot)
-- Password Manager: [bitwarden](https://bitwarden.com) with self-hosted [vaultwarden](https://github.com/dani-garcia/vaultwarden) server
+- Password Manager: [Bitwarden](https://bitwarden.com) with self-hosted [Vaultwarden](https://github.com/dani-garcia/vaultwarden) server
 
 ## Service
 
@@ -31,5 +31,5 @@ You can find all the software and config in my laptop at my [nix-config](https:/
   - [SimpleLogin](https://simplelogin.io)
 - Domain Register:
   - [porkbun](https://porkbun.com)
-- Cloud Server:
+- Cloud Host Server:
   - [DigitalOcean](https://www.digitalocean.com): hosted this website
