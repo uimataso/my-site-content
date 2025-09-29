@@ -3,12 +3,12 @@ title: home
 description: home page of uima's site
 ---
 
-Hi! I am **uima**!
+Hi! I am **uima**! A software developer working on web backend and devops. And enjoying tinkering around, learning some cool stuff. Now I'm started writing some blog as well!
 
-I'm a software developer, you can find me at:
+You can find me at:
 
 - Email: [me@uimataso.com](mailto:me@uimataso.com)
-- GitHub: [https://github.com/uimataso](https://github.com/uimataso)
+- GitHub: [github.com/uimataso](https://github.com/uimataso)
 - Telegram: [@uimataso](https://t.me/uimataso)
 
 The main languages I use:
