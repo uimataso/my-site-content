@@ -5,3 +5,5 @@ words:
   - nixpkgs
   - nvim
   - pkgs
+  - restic
+  - Backblaze

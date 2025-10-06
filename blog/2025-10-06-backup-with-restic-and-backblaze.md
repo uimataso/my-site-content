@@ -6,7 +6,7 @@ tags: ["zh", "linux"]
 
 備份是一件一直在我的任務清單裡，但一直沒有做的事。雖然我一直覺得我沒有什麼重要的資料，但還是會有一種不安全感跟心虛感。但是從今以後就不一樣了，以後我就是一個可以在街上昂首闊步、資料都有備份的人了。
 
-要備份的裝置有 homelab 跟筆電，而其中要備份的資料都滿清楚的。我的 homelab 上的 services 全部都是用 docker-compose 部署的，所以只需要備份 `docker-compose.yaml` 跟 volumes。而我的筆電是 [NixOS](https://nixos.org) + [Impermanence](https://github.com/nix-community/impermanence)，只要沒有在 Nix config 裡宣告的資料會在重開機時清掉，而有宣告的資料則會儲存在 `/persist` 裡，所以我只要備份 `/persist` 就沒問題了。
+要備份的裝置有 homelab 跟筆電，而其中要備份的資料都滿清楚的。我的 homelab 上的 services 全部都是用 docker-compose 部署的，所以只需要備份 `docker-compose.yaml` 跟 volumes。我的筆電是 [NixOS](https://nixos.org) + [Impermanence](https://github.com/nix-community/impermanence)，只要沒有在 Nix config 裡宣告的資料會在重開機時清掉，而有宣告的資料則會儲存在 `/persist` 裡，所以我只要備份 `/persist` 就沒問題了。
 
 備份的程式我選擇的是 [restic](https://github.com/restic/restic)，因為我的需求並不多，是增量式儲存跟有加密就好了。
 
@@ -42,7 +42,7 @@ export RESTIC_REPOSITORY="s3://<bucket-endpoint>/<bucket-name>"
 export RESTIC_PASSWORD="<secret>"
 ```
 
-其中 `AWS_ACCESS_KEY_ID` 就等於 Backblaze 的 `KeyID`、`AWS_SECRET_ACCESS_KEY` 是 `ApplicationKey`。`bucket-endpoint` 可以在 bucket 頁面找到：
+其中 `AWS_ACCESS_KEY_ID` 就等於 Backblaze 的 `KeyID`、`AWS_SECRET_ACCESS_KEY` 就等於 Backblaze 的 `ApplicationKey`。而 `bucket-endpoint` 可以在 bucket 頁面找到：
 
 ![backblaze bucket endpoint](./images/b2-bucket-endpoint.png)
 
@@ -110,9 +110,7 @@ export RESTIC_PASSWORD='secret'
 tail -n 1000 "$LOG_FILE" > "${LOG_FILE}.tmp" && mv "${LOG_FILE}.tmp" "$LOG_FILE"
 ```
 
-基本上就是跑備份（`restic backup`）然後在把舊的 snapshots 刪掉（`restic forget -- prune`）而已。有一點要注意的是，`restic forget` 只會把 snapshots 刪掉，但**不會**把資料從硬碟上移除，所以還要在跑 `restic prune` 或是使用 `--prune` flag，才會真的把沒用的資料刪除。
-
-`restic forget` 中的 `--keep-*` flag 表示要保留那些備份，這樣備份的大小才不會無限增長，又可以保留多個 snapshots。
+基本上就是跑備份（`restic backup`）然後把舊的 snapshots 刪掉（`restic forget --prune`）只保留 `--keep-*` flag 指定的備份。有一點要注意的是，`restic forget` 只會把 snapshots 刪掉，但**不會**把資料從硬碟上移除，所以還要在跑 `restic prune` 或是使用 `--prune` flag，才會真的把沒用的資料刪除。
 
 > [!NOTE]
 > 要記得設定有 APP key 的檔案的權限，像 `chmod 700 the-script`，只有擁有檔案的人或 root 可以存取、執行。
@@ -219,7 +217,7 @@ restic ls d2e8449d /data/download
 
 ### Mount
 
-另一個方式是用 `restic mount`。這個會直接把 repository 掛載到一個目錄下：
+另一個方式是用 `restic mount`。這個會直接把整個 repository 掛載到一個目錄下：
 
 ```sh
 mkdir /tmp/restic
