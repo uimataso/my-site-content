@@ -6,7 +6,7 @@ tags: ["zh", "fun-fact"]
 
 在今天 [ゆるコンピュータ科学ラジオ](https://www.youtube.com/@yurucom) 的節目「[URLを徹底解剖したら、衝撃の連続でした。](https://www.youtube.com/watch?v=_DEyG6ef8CY&t=228s)」中，主持人提到 [URL](https://wikipedia.org/wiki/URL) 中的 `//` 是失敗作，連發明 URL 的人都承認，它其實根本不是必要的！
 
-![URLを分解しよう](./images/yurucom-url-explained.png)
+![URLを分解しよう](./images/yurucom-url-explained.jpg)
 
 ……笑死。去查了一下還真的是這樣。
 
