@@ -99,7 +99,13 @@ However, when you first open a terminal, you’ll see an empty line at the very 
 PS1='$(printf "%$((COLUMNS-1))s\r")'$PS1
 ```
 
-This similar to how zsh handle this issue. It works by placing `COLUMNS - 1` spaces. This is the solution I found online.
+This similar to how zsh handle this issue.
+It works by placing `COLUMNS - 1` spaces,
+which guarantees that the prompt is pushed to the next line,
+and followed by a [carriage return `\r`](https://en.wikipedia.org/wiki/Carriage_return) which moves the cursor back to the beginning,
+then draw the prompt.
+
+This is the solution I found online.
 
 It works, but it comes with the same resizing issue as zsh, and worse, because bash doesn’t handle it as gracefully.
 
