@@ -1,0 +1,33 @@
+site_name: "uima's site"
+site_url: "https://uimataso.com"
+author: "uima"
+author_email: "me@uimataso.com"
+
+commit_base_url: "https://github.com/uimataso/my-site-content/commit"
+
+skip:
+  - .git
+  - .gitignore
+  - .cspell.yaml
+  - README.md
+  - config.yaml
+
+header:
+  home_name: "uima's site"
+  links:
+    - title: blog
+      url: /blog
+    - title: uses
+      url: /uses
+
+footer:
+  cc: "© 2025 uima"
+  links:
+    - title: code of this site
+      url: https://github.com/uimataso/my-site
+    - title: content of this site
+      url: https://github.com/uimataso/my-site-content
+    - title: rss
+      url: /blog/rss.xml
+    - title: me@uimataso.com
+      url: mailto:me@uimataso.com
