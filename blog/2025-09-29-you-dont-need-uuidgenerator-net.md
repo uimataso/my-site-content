@@ -1,5 +1,5 @@
 ---
-tags: ["en", "linux"]
+tags: ["en", "cli"]
 ---
 
 # You Don't Need uuidgenerator.net

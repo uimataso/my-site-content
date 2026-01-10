@@ -1,5 +1,5 @@
 ---
-tags: ["en", "linux", "bash"]
+tags: ["en", "shell"]
 ---
 
 # Fix bash prompt appearing on the same line as the output
