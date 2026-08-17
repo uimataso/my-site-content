@@ -9,15 +9,19 @@ Things I use now.
 - HomeLab: [Orange Pi 5 Plus](http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-5-plus-32GB.html) with [Debian Official Image](http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-Pi-5-plus-32GB.html)
 - Keyboard: Self made [ferris](https://github.com/pierrechevalier83/ferris) with [this keymap](https://github.com/uimataso/qmk_userspace/tree/main/keyboards/ferris/sweep/keymaps/uima_sweep)
 - 3D Printer: [Prusa MK4](https://www.prusa3d.com/product/original-prusa-mk4s-3d-printer-kit) (I can't find the link to MK4, only MK4S...)
+- E-Ink Reader:
+  - [Xteink X4](https://www.xteink.com/products/xteink-x4)
+- Game Console:
+  - New 3DS LL
 
 ## Software
 
 You can find all the software and config in my laptop at my [nix-config](https://github.com/uimataso/nix-config).
 
-- Compositor (Window manager): [Hyprland](https://hypr.land)
-- Browser:
-  - [LibreWolf](https://librewolf.net): my main browser
-  - [Brave](https://brave.com)
+- Compositor (Window manager):
+  - [Niri](https://niri-wm.github.io/niri/)
+  - [Hyprland](https://hypr.land)
+- Browser: [LibreWolf](https://librewolf.net)
 - Editor: [NeoVim](https://neovim.io)
 - Terminal: [foot](https://codeberg.org/dnkl/foot)
 - Password Manager: [Bitwarden](https://bitwarden.com) with self-hosted [Vaultwarden](https://github.com/dani-garcia/vaultwarden) server
@@ -32,4 +36,4 @@ You can find all the software and config in my laptop at my [nix-config](https:/
 - Domain Register:
   - [porkbun](https://porkbun.com)
 - Cloud Host Server:
-  - [DigitalOcean](https://www.digitalocean.com): hosted this website
+  - [vultr](https://www.vultr.com): hosted this website
